@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_free_string.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivi <nivi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 11:04:25 by nivicius         ###   ########.fr       */
+/*   Created: 2023/11/10 17:42:24 by nivi              #+#    #+#             */
+/*   Updated: 2023/11/10 17:43:13 by nivi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include "libft.h"
 
-#include <stdio.h>
-
-#endif //PUSH_SWAP_H
+char	*ft_free_str(char *str)
+{
+	free(str);
+	str = NULL;
+	return (NULL);
+}

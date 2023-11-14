@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 11:04:25 by nivicius         ###   ########.fr       */
+/*   Created: 2023/08/05 19:33:08 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/08/05 20:15:23 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include "libft.h"
 
-#include <stdio.h>
+void	*ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	index;
 
-#endif //PUSH_SWAP_H
+	index = 0;
+	if (!s || !f)
+		return (NULL);
+	while (s[index] != '\0')
+	{
+		f(index, &s[index]);
+		index++;
+	}
+	return (NULL);
+}

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 11:04:25 by nivicius         ###   ########.fr       */
+/*   Created: 2023/11/14 10:59:34 by nivicius          #+#    #+#             */
+/*   Updated: 2023/11/14 11:04:23 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS
+# define PUSH_SWAP_BONUS
 
 #include <stdio.h>
 
-#endif //PUSH_SWAP_H
+#endif

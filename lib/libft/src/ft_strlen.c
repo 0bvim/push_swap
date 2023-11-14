@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 11:04:25 by nivicius         ###   ########.fr       */
+/*   Created: 2023/07/19 02:01:24 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/07/24 17:46:32 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#include "libft.h"
 
-#include <stdio.h>
+size_t	ft_strlen(const char *str)
+{
+	size_t	len;
 
-#endif //PUSH_SWAP_H
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
+}

@@ -3,24 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+         #
+#    By: nivi <nivi@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/14 03:44:54 by vde-frei          #+#    #+#              #
-#    Updated: 2023/11/14 03:58:01 by vde-frei         ###   ########.fr        #
+#    Created: 2023/07/20 12:05:38 by vde-frei          #+#    #+#              #
+#    Updated: 2023/11/10 17:48:52 by nivi             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# program name #
-NAME = push_swap
+NAME = libft.a
 
-# shell #
 SHELL := /bin/bash
-
-# misc #
 COUNT := 0
-SLEEP := sleep 0.2
+SLEEP := sleep 0.5
 
-# colors #
 BLACK  		 = \033[0;30m
 RED    		 = \033[0;31m
 GREEN  		 = \033[0;32m
@@ -31,68 +26,46 @@ CYAN   		 = \033[0;36m
 WHITE  		 = \033[0;37m
 RESET  		 = \033[0m
 
-# functions #
-define eraseBins
-	$(if $(NAME),@$(RM) $(NAME))
-	$(if $(BLIBNAME),@$(RM) $(BLIBNAME))
-endef
-
-# messages #
-MANDATORY = Program compiled
-LBONUS = Bonus Program compiled
+MANDATORY = Static library compiled
+LBONUS =
 CLEAN = Objects delete
-FCLEAN = Program delete
-LIBNAME = pipex
-BLIBNAME = pipex_bonus
+FCLEAN = Static library delete
+LIBNAME = libft
+BLIBNAME =
 COMP = Compiling
 
-# debbug and normal flags #
 DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
-CFLAGS = -Wall -Werror -Wextra -g3 -O3 -fomit-frame-pointer -finline-functions # TO IMPROVE PERFORMANCE
+CFLAGS = -Wall -Werror -Wextra -O3 -fomit-frame-pointer -finline-functions # TO IMPROVE PERFORMANCE
+ARFLAGS = rcs
 
-# paths #
 SRC = src
-BONUS = src/bonus
+BONUS =
 INC = includes
 OBJ = obj
 
-# libs #
-INCLUDES = -I$(INC)/ -Ilib/libft/includes/
-LINCLUDES = -L$(LIBFT_PATH) -lft
+INCLUDES = -I$(INC)/
 
-LIBFT = lib/libft/libft.a
-LIBFT_PATH = lib/libft
+CFILES = ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
+	ft_strlen.c ft_tolower.c ft_toupper.c ft_memset.c ft_bzero.c \
+	ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_strncmp.c \
+	ft_strchr.c ft_strrchr.c ft_strdup.c ft_memchr.c ft_strnstr.c \
+	ft_memcmp.c ft_calloc.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+	ft_putnbr_fd.c ft_itoa.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
+	ft_strmapi.c ft_striteri.c ft_lstnew.c  ft_lstadd_front.c ft_lstsize.c \
+	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+	ft_lstmap.c ft_free_split.c get_next_line_bonus.c get_next_line_utils_bonus.c \
+	ft_free_str.c
 
-# files #
-CFILES = $(addprefix $(SRC)/, main.c string.c errors.c)
-
-BFILES = $(addprefix $(BONUS)/, main_bonus.c string_bonus.c errors_bonus.c \
-child_bonus.c heredoc_bonus.c)
-
-# obj dir #
 OBJECT =  $(patsubst %, $(OBJ)/%, $(notdir $(CFILES:.c=.o)))
 
-# define bonus #
-ifdef WITH_BONUS
-	NAME = $(BLIBNAME)
-	CFILES = $(BFILES)
-	SRC = $(BONUS)
-	MANDATORY = $(LBONUS)
-	MAGENTA = $(YELLOW)
-	LIBNAME = $(BLIBNAME)
-endif
-
-# define debbug #
 ifdef WITH_DEBBUG
 	CFLAGS = $(DFLAGS)
 endif
 
-# rules #
 all: $(OBJ) $(NAME)
 
 $(NAME): $(OBJECT)
-	@$(MAKE) -sC $(LIBFT_PATH)
-	@$(CC) $(CFLAGS) $(INCLUDES) $(LINCLUDES) $(OBJECT) $(LIBFT) -o $(NAME)
+	@$(AR) $(ARFLAGS) $@ $?
 	@$(SLEEP)
 	@printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
 
@@ -105,22 +78,18 @@ $(OBJ)/%.o: $(SRC)/%.c
 	@printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
 
 clean:
-	@$(MAKE) fclean -sC $(LIBFT_PATH)
-	@$(RM) -rf $(OBJ)/
+	@$(RM) -rf $(OBJ)
 	@$(SLEEP)
 	@printf "$(RED)$(CLEAN)$(RESET)\n"
 
 fclean: clean
-	$(call eraseBins)
+	@$(RM) $(NAME)
 	@$(SLEEP)
 	@printf "$(RED)$(FCLEAN)$(RESET)\n"
 
 re: fclean all
 
-bonus:
-	@make WITH_BONUS=TRUE --no-print-directory
-
 debbug:
 	@make WITH_DEBBUG=TRUE --no-print-directory
 
-.PHONY: all clean fclean re bonus debbug
+.PHONY: all clean fclean re debbug
