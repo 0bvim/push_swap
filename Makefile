@@ -30,8 +30,8 @@ COMP = Compiling
 
 # debbug and normal flags #
 DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
-CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP -fprofile-generate # TO IMPROVE PERFORMANCE
-LFLAGS = -fprofile-use -march=native # TO OPTIMIZE FOR SPECIFIC ARCHITECTURE
+CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP # TO IMPROVE PERFORMANCE
+LFLAGS = -march=native # TO OPTIMIZE FOR SPECIFIC ARCHITECTURE
 
 # paths #
 SRC = src
