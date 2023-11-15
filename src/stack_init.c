@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	stack_init(t_stack **a, char **argv, size_t flag)
+void	stack_init(t_stack **a, char **argv, bool flag)
 {
 	long	nbr;
 
@@ -20,10 +20,28 @@ void	stack_init(t_stack **a, char **argv, size_t flag)
 	{
 		nbr = ft_atol(*argv);
 		if (nbr > INT_MAX || nbr < INT_MIN)
-			//function to free stack, params stack, argv and flag
-		if (/* function to check double nbrs */)
-			//function to free stack, params stack, argv and flag
+			error_free(a, argv, flag);
+		if (check_double(*a, (int)nbr))
+			error_free(a, argv, flag);
 		// function to append node params a (int)nbr
 		++argv;
 	}
+}
+
+void	error_free(t_stack **a, char **argv, bool flag)
+{
+	exit(ERR);
+}
+
+int	check_double(t_stack *a, int nbr)
+{
+	if (NULL == a)
+		return (FALSE);
+	while (a)
+	{
+		if (a->value == nbr)
+			return (TRUE);
+		a = a->next;
+	}
+	return (FALSE);
 }
