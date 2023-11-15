@@ -47,7 +47,7 @@ LIBFT = lib/libft/libft.a
 LIBFT_PATH = lib/libft
 
 # files #
-CFILES = $(addprefix $(SRC)/, main.c)
+CFILES = $(addprefix $(SRC)/, main.c stack_init.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 

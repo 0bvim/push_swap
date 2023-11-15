@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivi <nivi@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 16:27:56 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/10 17:48:17 by nivi             ###   ########.fr       */
+/*   Updated: 2023/11/15 02:11:17 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ struct	s_list
 	t_list	*next;
 };
 
+typedef long int		t_lint;
+
 /* Bonus Functions */
 
 t_list	*ft_lstnew(void *content);
@@ -41,7 +43,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /* Mandatory Functions */
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -75,5 +76,6 @@ void	ft_putchar_fd(char c, int fd);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
+t_lint	ft_atol(const char *nptr);
 
 #endif

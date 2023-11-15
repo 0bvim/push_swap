@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   stack_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/15 03:39:11 by nivicius         ###   ########.fr       */
+/*   Created: 2023/11/15 01:21:35 by nivicius          #+#    #+#             */
+/*   Updated: 2023/11/15 01:33:01 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-// includes
-# include "../lib/libft/includes/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-
-// struct and enums
-typedef struct s_stack	t_stack;
-struct s_stack
+void	stack_init(t_stack **a, char **argv, size_t flag)
 {
-	int	value;
-	t_stack	*next;
-	t_stack *prev;
-};
+	long	nbr;
 
-typedef enum e_my_boo
-{
-	FALSE,
-	TRUE,
-}		t_my_boo; 
-
-// functions
-void	stack_init(t_stack **a, char **argv, size_t flag);
-
-#endif
+	while (*argv)
+	{
+		nbr = ft_atol(*argv);
+		if (nbr > INT_MAX || nbr < INT_MIN)
+			//function to free stack, params stack, argv and flag
+		if (/* function to check double nbrs */)
+			//function to free stack, params stack, argv and flag
+		// function to append node params a (int)nbr
+		++argv;
+	}
+}
