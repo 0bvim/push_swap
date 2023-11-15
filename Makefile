@@ -51,6 +51,8 @@ CFILES = $(addprefix $(SRC)/, main.c stack_init.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 
+VAL_TXT = valgrind-out.txt
+
 # obj dir #
 OBJECT =  $(patsubst %, $(OBJ)/%, $(notdir $(CFILES:.c=.o)))
 
@@ -89,7 +91,7 @@ endef
 
 define clean
 	@$(MAKE) fclean -sC $(LIBFT_PATH)
-	@$(RM) -rf $(OBJ)/
+	@$(RM) -rf $(OBJ)/ && $(RM) -rf $(VAL_TXT)
 	@$(SLEEP)
 	@printf "$(RED)$(CLEAN)$(RESET)\n"
 endef
