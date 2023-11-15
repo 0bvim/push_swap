@@ -6,13 +6,23 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 11:04:25 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:55:00 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include <stdio.h>
+# include "libft.h"
+# include <unistd.h>
+# include <stdlib.h>
 
-#endif //PUSH_SWAP_H
+typedef struct s_stack	t_stack;
+struct s_stack
+{
+	int	value;
+	t_stack	*next;
+	t_stack *prev;
+};
+
+#endif

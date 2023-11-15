@@ -6,13 +6,12 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:59:34 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 11:04:23 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:08:40 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_BONUS
 # define PUSH_SWAP_BONUS
 
-#include <stdio.h>
 
 #endif
