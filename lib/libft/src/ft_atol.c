@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 14:18:58 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/15 02:25:49 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:57:48 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long int	ft_atol(const char *nptr)
+t_lint	ft_atol(const char *nptr)
 {
 	long int		nb;
 	int				sign;
