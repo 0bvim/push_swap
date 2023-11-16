@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/15 21:02:11 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/15 21:55:36 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 typedef struct s_stack	t_stack;
 struct s_stack
 {
-	int	value;
+	int		value;
 	t_stack	*next;
-	t_stack *prev;
+	t_stack	*prev;
 };
 
 typedef enum e_my_boo
@@ -34,9 +34,10 @@ typedef enum e_my_boo
 	FALSE,
 	TRUE,
 	ERR,
-}		t_my_boo; 
+}		t_my_boo;
 
 // functions
+t_stack	*find_last_node(t_stack *head);
 void	append_node(t_stack **stack, int nbr);
 void	stack_init(t_stack **a, char **argv, bool flag);
 void	error_free(t_stack **a, char **argv, bool flag);

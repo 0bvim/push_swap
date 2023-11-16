@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:59:34 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/14 23:08:40 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/15 21:59:12 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_BONUS
-# define PUSH_SWAP_BONUS
+#ifndef CHECKER_H
+# define CHECKER_H
 
+# include <stdio.h>
 
 #endif

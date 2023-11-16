@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:59:48 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/15 21:19:41 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/15 21:53:07 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,13 @@ void	append_node(t_stack **stack, int nbr)
 		last_node->next = node;
 		node->prev = last_node;
 	}
+}
+
+t_stack	*find_last_node(t_stack *head)
+{
+	if (NULL == head)
+		return (NULL);
+	while (head->next)
+		head = head->next;
+	return (head);
 }
