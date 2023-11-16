@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/15 21:51:18 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/16 17:14:28 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void	stack_init(t_stack **a, char **argv, bool flag)
 
 void	error_free(t_stack **a, char **argv, bool flag)
 {
-	(void)a;
 	(void)argv;
 	(void)flag;
+	free_list(*a);
 	exit(ERR);
 }
 
