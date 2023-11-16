@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/15 11:21:26 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/15 21:02:11 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef enum e_my_boo
 }		t_my_boo; 
 
 // functions
+void	append_node(t_stack **stack, int nbr);
 void	stack_init(t_stack **a, char **argv, bool flag);
 void	error_free(t_stack **a, char **argv, bool flag);
 int		check_double(t_stack *a, int nbr);

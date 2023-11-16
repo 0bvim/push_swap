@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_init.c                                        :+:      :+:    :+:   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 01:21:35 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/15 01:33:01 by nivicius         ###   ########.fr       */
+/*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/11/15 21:22:55 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	stack_init(t_stack **a, char **argv, bool flag)
 			error_free(a, argv, flag);
 		if (check_double(*a, (int)nbr))
 			error_free(a, argv, flag);
-		// function to append node params a (int)nbr
+		append_node(a, (int)nbr);
 		++argv;
 	}
 }

@@ -47,7 +47,7 @@ LIBFT = lib/libft/libft.a
 LIBFT_PATH = lib/libft
 
 # files #
-CFILES = $(addprefix $(SRC)/, main.c stack_init.c)
+CFILES = $(addprefix $(SRC)/, main.c stack_init.c nodes.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 
@@ -157,5 +157,5 @@ debbug:
 help:
 	$(call help)
 
-.PHONY: all bonus clean fclean re debbug
+.PHONY: all bonus clean fclean re debbug help
 .DEFAULT_GOAL := all
