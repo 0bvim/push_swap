@@ -151,7 +151,7 @@ re: fclean all
 bonus:
 	$(call bonus)
 
-debbug:
+debug:
 	$(call debug)
 
 help:
