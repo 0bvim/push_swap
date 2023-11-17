@@ -122,7 +122,7 @@ define help
 	@echo -e "$(CYAN)fclean:$(RESET) $(RED)Remove the program and the object files$(RESET)"
 	@echo -e "$(CYAN)re:$(RESET) $(YELLOW)Rebuild the program$(RESET)"
 	@echo -e "$(CYAN)bonus:$(RESET) $(MAGENTA)Build the bonus program$(RESET)"
-	@echo -e "$(CYAN)debbug:$(RESET) $(WHITE)Build the program with debugging information$(RESET)"
+	@echo -e "$(CYAN)debug:$(RESET) $(WHITE)Build the program with debugging information$(RESET)"
 endef
 
 # rules #
@@ -157,5 +157,5 @@ debug:
 help:
 	$(call help)
 
-.PHONY: all bonus clean fclean re debbug help
+.PHONY: all bonus clean fclean re debug help Makefile
 .DEFAULT_GOAL := all
