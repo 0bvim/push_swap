@@ -30,7 +30,7 @@ COMP = Compiling
 
 # debbug and normal flags #
 DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
-CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP #-fsanitize=address # TO IMPROVE PERFORMANCE
+CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP -fsanitize=address # TO IMPROVE PERFORMANCE
 LFLAGS = -march=native # TO OPTIMIZE FOR SPECIFIC ARCHITECTURE
 
 # paths #
@@ -77,7 +77,6 @@ define create_objects_dir
 endef
 
 define compile
-	@$(MAKE) -sC $(LIBFT_PATH)
 	@$(CC) -o $(NAME) $(CFLAGS) $(LFLAGS) $(INCLUDES) $(LINCLUDES) $(OBJECT) $(LIBFT)
 	@$(SLEEP)
 	@printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
@@ -85,6 +84,7 @@ endef
 
 define compile_source
 	@$(eval COUNT=$(shell expr $(COUNT) + 1))
+	@$(MAKE) -sC $(LIBFT_PATH)
 	@$(CC) -o $@ $(CFLAGS) $(INCLUDES) -c $<
 	@printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
 endef
@@ -103,11 +103,11 @@ define fclean
 endef
 
 define bonus
-	@make WITH_BONUS=TRUE --no-print-directory
+	@make WITH_BONUS=TRUE -s
 endef
 
 define debug
-	@make WITH_DEBBUG=TRUE --no-print-directory
+	@make WITH_DEBBUG=TRUE -s
 endef
 
 define eraseBins
