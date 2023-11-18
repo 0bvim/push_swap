@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/16 17:14:28 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/18 02:41:22 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	error_free(t_stack **a, char **argv, bool flag)
 {
 	(void)argv;
 	(void)flag;
+	ft_putstr_fd("Error\n", 2);
 	free_list(*a);
 	exit(ERR);
 }
