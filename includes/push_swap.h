@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/18 04:45:00 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:55:08 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ void	append_node(t_stack **stack, int nbr);
 void	stack_init(t_stack **a, char **argv, bool flag);
 void	error_free(t_stack **a, char **argv, bool flag);
 int		check_double(t_stack *a, int nbr);
+int		check_argv(char *argv);
 
 #endif

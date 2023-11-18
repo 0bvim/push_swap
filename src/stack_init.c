@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/18 05:22:04 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:55:17 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	stack_init(t_stack **a, char **argv, bool flag)
 
 	while (*argv)
 	{
+		if (check_argv(*argv))
+			error_free(a, argv, flag);
 		nbr = ft_atol(*argv);
 		if (nbr > INT_MAX || nbr < INT_MIN)
 			error_free(a, argv, flag);
@@ -47,5 +49,17 @@ int	check_double(t_stack *a, int nbr)
 			return (TRUE);
 		a = a->next;
 	}
+	return (FALSE);
+}
+
+int	check_argv(char *argv)
+{
+	if (!*argv)
+		return (TRUE);
+	if (*argv == '-' || *argv == '+')
+		argv++;
+	while (*argv)
+		if (!ft_isdigit(*argv++))
+			return (TRUE);
 	return (FALSE);
 }
