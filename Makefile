@@ -107,7 +107,9 @@ define bonus
 endef
 
 define debug
-	@make WITH_DEBBUG=TRUE -s
+	$(call clean)
+	$(call fclean)
+	@$(MAKE) WITH_DEBBUG=TRUE -s
 endef
 
 define eraseBins
