@@ -28,7 +28,7 @@ LIBNAME = push_swap
 BLIBNAME = push_swap_bonus
 COMP = Compiling
 
-# debbug and normal flags #
+# debug and normal flags #
 DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
 CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP -fsanitize=address # TO IMPROVE PERFORMANCE
 LFLAGS = -march=native # TO OPTIMIZE FOR SPECIFIC ARCHITECTURE
@@ -39,6 +39,10 @@ BONUS = src/bonus
 INC = includes
 OBJ = obj
 
+# files path #
+VALIDATIONS = $(SRC)/validations
+MOVIMENTATION = $(SRC)/movimentation
+
 # libs #
 INCLUDES = -I$(INC)/ -Ilib/libft/includes/
 LINCLUDES = -L$(LIBFT_PATH) -lft
@@ -48,13 +52,17 @@ LIBFT_PATH = lib/libft
 
 # files #
 CFILES = $(addprefix $(SRC)/, main.c stack_init.c nodes.c)
+CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
+CFILES += $(addprefix $(MOVIMENTATION)/, push_a.c push_b.c rev_rotate_a.c \
+rev_rotate_b.c rev_rotate_both.c rotate_a.c rotate_b.c rotate_both.c \
+swap_a.c swap_b.c swap_both.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 
 VAL_TXT = valgrind-out.txt
 
 # obj dir #
-OBJECT =  $(patsubst %, $(OBJ)/%, $(notdir $(CFILES:.c=.o)))
+OBJECT =  $(CFILES:%.c=$(OBJ)/%.o)
 
 # define bonus #
 ifdef WITH_BONUS
@@ -73,7 +81,7 @@ endif
 
 # functions #
 define create_objects_dir
-	@mkdir -p $(OBJ)
+	@mkdir -p $(dir $@)
 endef
 
 define compile
@@ -128,16 +136,14 @@ define help
 endef
 
 # rules #
-all: $(OBJ) $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJECT)
 	$(call create_objects_dir)
 	$(call compile)
 
-$(OBJ):
+$(OBJ)/%.o: %.c
 	$(call create_objects_dir)
-
-$(OBJ)/%.o: $(SRC)/%.c
 	$(call compile_source)
 
 -include $(OBJECT:.o=.d)

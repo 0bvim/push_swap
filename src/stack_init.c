@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/18 16:55:17 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/19 03:22:45 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int	check_argv(char *argv);
+static int	check_double(t_stack *a, int nbr);
 
 void	stack_init(t_stack **a, char **argv, bool flag)
 {
@@ -30,16 +33,7 @@ void	stack_init(t_stack **a, char **argv, bool flag)
 	}
 }
 
-void	error_free(t_stack **a, char **argv, bool flag)
-{
-	(void)argv;
-	(void)flag;
-	ft_putstr_fd("Error\n", 2);
-	free_list(*a);
-	exit(ERR);
-}
-
-int	check_double(t_stack *a, int nbr)
+static int	check_double(t_stack *a, int nbr)
 {
 	if (NULL == a)
 		return (FALSE);
@@ -52,7 +46,7 @@ int	check_double(t_stack *a, int nbr)
 	return (FALSE);
 }
 
-int	check_argv(char *argv)
+static int	check_argv(char *argv)
 {
 	if (!*argv)
 		return (TRUE);
