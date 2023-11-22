@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 02:26:11 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/22 10:11:20 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:49:02 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ void	error_free(t_stack **a, char **argv, bool flag)
 int	validation_two(char **argv)
 {
 	if (validate_entrance(argv))
-		return (ft_putstr_fd("Error\n", 2), EXIT_FAILURE);
+	{
+		ft_putstr_fd("Error\n", 2);
+		exit (EXIT_FAILURE);
+	}
 	else if (ft_isdigit(argv[1][0]) && !(ft_isascii(argv[1][0])))
 		return (EXIT_FAILURE);
 	return (TRUE);

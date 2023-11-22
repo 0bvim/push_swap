@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/22 11:06:13 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:45:32 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char *argv[])
 	b = NULL;
 	split = 0;
 	(void)b;
-	if (argc < 2 || !argv[1][0])
+	if (argc < 2)
 		return (EXIT_FAILURE);
 	else if (2 == argc)
 	{
