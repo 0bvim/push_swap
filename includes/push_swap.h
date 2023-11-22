@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/22 10:11:05 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:18:55 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,14 @@ typedef enum e_my_boo
 	ERR,
 }		t_my_boo;
 
-// functions
+// startup functions
 int		validation_two(char **argv);
-void	free_list(t_stack *head);
-t_stack	*find_last_node(t_stack *head);
-void	append_node(t_stack **stack, int nbr);
 void	stack_init(t_stack **a, char **argv, bool flag);
+
+// handle nodes
+void	free_list(t_stack *head);
+void	append_node(t_stack **stack, int nbr);
 void	error_free(t_stack **a, char **argv, bool flag);
+t_stack	*find_last_node(t_stack *head);
 
 #endif

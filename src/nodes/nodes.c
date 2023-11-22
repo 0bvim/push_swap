@@ -6,11 +6,11 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:59:48 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/16 16:58:26 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:21:12 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	append_node(t_stack **stack, int nbr)
 {
