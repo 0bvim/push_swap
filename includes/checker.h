@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 10:59:34 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/15 21:59:12 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/23 23:18:47 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 
+// includes
+# include "../lib/libft/includes/libft.h"
+# include <limits.h>
+# include <stdbool.h>
 # include <stdio.h>
 
 #endif
