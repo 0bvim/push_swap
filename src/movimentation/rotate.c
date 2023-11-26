@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 03:43:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/26 12:55:57 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/26 13:33:34 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,16 @@
 
 static void	rotate(t_stack **head)
 {
+	t_stack	*last_node;
+
 	if (NULL == *head || NULL == head)
 		return ;
-	while (*head)
-		*head = (*head)->next;
+	last_node = find_last_node(*head);
+	last_node->next = *head;
+	*head = (*head)->next;
+	(*head)->prev = NULL;
+	last_node->next->prev = last_node;
+	last_node->next->next = NULL;
 }
 
 void	ra(t_stack **a, bool checker)
