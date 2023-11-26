@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/26 12:17:58 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/26 12:56:53 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,11 @@ t_stack	*find_last_node(t_stack *head);
 
 // swap moviments
 void	sa(t_stack **a, bool checker);
-void	sb(t_stack **a, bool checker);
+void	sb(t_stack **b, bool checker);
 void	ss(t_stack **a, t_stack **b, bool checker);
 
+// rotate moviments
+void	ra(t_stack **a, bool checker);
+void	rb(t_stack **b, bool checker);
+void	rr(t_stack **a, t_stack **b, bool checker);
 #endif
