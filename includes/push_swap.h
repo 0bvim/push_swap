@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/26 14:25:09 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/26 19:43:25 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,9 @@ void	rr(t_stack **a, t_stack **b, bool checker);
 void	rra(t_stack **a, bool checker);
 void	rrb(t_stack **b, bool checker);
 void	rrr(t_stack **a, t_stack **b, bool checker);
+
+// push moviments
+void	pa(t_stack **a, t_stack **b, bool checker);
+void	pb(t_stack **a, t_stack **b, bool checker);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/26 14:26:25 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/26 20:05:13 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int	main(int argc, char *argv[])
 		stack_init(&a, argv + 1, 2 == argc);
 	if (split == TRUE)
 		ft_free_split(argv);
-	rra(&a, FALSE);
 	free_list(a);
+	if (b)
+		free_list(b);
 	return (EXIT_SUCCESS);
 }
