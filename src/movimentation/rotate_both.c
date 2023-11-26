@@ -3,10 +3,11 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_both.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 03:43:05 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/19 03:43:07 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/25 23:01:40 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/push_swap.h"
