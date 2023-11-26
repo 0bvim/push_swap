@@ -6,7 +6,7 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/23 23:18:21 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/11/26 00:16:39 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef enum e_my_boo
 	FALSE,
 	TRUE,
 	ERR,
+	OUT = 0,
 }		t_my_boo;
 
 // startup functions
@@ -44,5 +45,10 @@ void	free_list(t_stack *head);
 void	append_node(t_stack **stack, int nbr);
 void	error_free(t_stack **a, char **argv, bool flag);
 t_stack	*find_last_node(t_stack *head);
+
+// swap moviments
+void	sa(t_stack **a, bool checker);
+void	sb(t_stack **a, bool checker);
+void	ss(t_stack **a, t_stack **b, bool checker);
 
 #endif

@@ -54,9 +54,7 @@ LIBFT_PATH = lib/libft
 # files #
 CFILES = $(addprefix $(SRC)/, main.c stack_init.c)
 CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
-CFILES += $(addprefix $(MOVIMENTATION)/, push_a.c push_b.c rev_rotate_a.c \
-rev_rotate_b.c rev_rotate_both.c rotate_a.c rotate_b.c rotate_both.c \
-swap_a.c swap_b.c swap_both.c)
+CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c)
 CFILES += $(addprefix $(NODES)/, nodes.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
