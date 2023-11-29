@@ -4,6 +4,7 @@
 		"stddef.h": "c",
 		"stdio.h": "c",
 		"floatn.h": "c",
-		"stdbool.h": "c"
+		"stdbool.h": "c",
+		"push_swap.h": "c"
 	}
 }
