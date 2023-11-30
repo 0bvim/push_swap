@@ -44,6 +44,7 @@ VALIDATIONS = $(SRC)/validations
 MOVIMENTATION = $(SRC)/movimentation
 NODES = $(SRC)/nodes
 SORT = $(SRC)/sorting
+ENTRANCE = $(SRC)/entrance
 
 # libs #
 INCLUDES = -I$(INC)/ -Ilib/libft/includes/
@@ -53,7 +54,7 @@ LIBFT = lib/libft/libft.a
 LIBFT_PATH = lib/libft
 
 # files #
-CFILES = $(addprefix $(SRC)/, main.c stack_init.c)
+CFILES = $(addprefix $(ENTRANCE)/, main.c stack_init.c)
 CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
 CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c)
 CFILES += $(addprefix $(NODES)/, nodes.c)

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/19 03:22:45 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/30 11:20:54 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 static int	check_argv(char *argv);
 static int	check_double(t_stack *a, int nbr);
