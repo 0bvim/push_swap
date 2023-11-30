@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/29 21:16:23 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/11/30 14:43:46 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_stack	t_stack;
 struct s_stack
 {
 	int		value;
+	int		split;
 	t_stack	*next;
 	t_stack	*prev;
 };
@@ -44,6 +45,7 @@ void	stack_init(t_stack **a, char **argv, bool flag);
 void	free_list(t_stack *head);
 void	append_node(t_stack **stack, int nbr);
 void	error_free(t_stack **a, char **argv, bool flag);
+size_t	stack_len(t_stack *node);
 t_stack	*find_last_node(t_stack *head);
 
 /* swap moviments */
@@ -66,7 +68,7 @@ void	pa(t_stack **a, t_stack **b, bool checker);
 void	pb(t_stack **a, t_stack **b, bool checker);
 
 /* sorting */
-void	find_highest(t_stack **stack);
+t_stack	*find_highest(t_stack *stack);
 bool	stack_sorted(t_stack *stack);
 void	tiny_sort(t_stack **a);
 

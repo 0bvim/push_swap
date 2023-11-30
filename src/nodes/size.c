@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tiny_sort.c                                        :+:      :+:    :+:   */
+/*   size.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 19:57:39 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/30 14:30:11 by nivicius         ###   ########.fr       */
+/*   Created: 2023/11/30 13:45:51 by nivicius          #+#    #+#             */
+/*   Updated: 2023/11/30 13:48:08 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	tiny_sort(t_stack **a)
+size_t	stack_len(t_stack *node)
 {
-	t_stack	*highest_node;
+	size_t	size;
 
-	highest_node = NULL;
-	highest_node = find_highest(*a);
-	if (*a == highest_node)
-		ra(a, false);
-	else if ((*a)->next == highest_node)
-		rra(a, false);
-	if ((*a)->value > (*a)->next->value)
-		sa(a, false);
+	size = 0;
+	while (node)
+	{
+		size++;
+		node = node->next;
+	}
+	return (size);
 }

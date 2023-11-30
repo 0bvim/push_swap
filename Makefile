@@ -57,7 +57,7 @@ LIBFT_PATH = lib/libft
 CFILES = $(addprefix $(ENTRANCE)/, main.c stack_init.c)
 CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
 CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c)
-CFILES += $(addprefix $(NODES)/, nodes.c)
+CFILES += $(addprefix $(NODES)/, nodes.c size.c)
 CFILES += $(addprefix $(SORT)/, tiny_sort.c is_sorted.c find_highest.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
