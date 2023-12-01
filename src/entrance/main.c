@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/01 11:10:02 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/01 19:12:47 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ int	main(int argc, char *argv[])
 	{
 		validation_two(argv);
 		argv = ft_split(argv[1], ' ');
-		a->split = TRUE;
 		stack_init(&a, argv, 2 == argc);
+		a->split = TRUE;
 	}
 	else
+	{
 		stack_init(&a, argv + 1, 2 == argc);
+		a->split = FALSE;
+	}
 	if (!stack_sorted(a))
 		sort_select(a, b);
 	free_all(a->split, argv, a, b);
