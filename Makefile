@@ -54,7 +54,7 @@ LIBFT = lib/libft/libft.a
 LIBFT_PATH = lib/libft
 
 # files #
-CFILES = $(addprefix $(ENTRANCE)/, main.c stack_init.c)
+CFILES = $(addprefix $(ENTRANCE)/, main.c stack_init.c sort_select.c free_all.c)
 CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
 CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c)
 CFILES += $(addprefix $(NODES)/, nodes.c size.c)

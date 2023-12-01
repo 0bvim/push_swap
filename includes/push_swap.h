@@ -6,7 +6,7 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/11/30 14:43:46 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/01 11:09:43 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ typedef enum e_my_boo
 
 /* startup functions */
 int		validation_two(char **argv);
+int		free_all(int split, char **argv, t_stack *a, t_stack *b);
 void	stack_init(t_stack **a, char **argv, bool flag);
+void	sort_select(t_stack *a, t_stack *b);
 
 /* handle nodes */
 void	free_list(t_stack *head);
