@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nodes.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:59:48 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/26 00:20:13 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/02 15:38:11 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	free_list(t_stack *head)
 	t_stack	*temp;
 
 	temp = NULL;
-	while (head->next)
+	while (head)
 	{
 		temp = head->next;
 		free(head);

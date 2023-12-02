@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:08:57 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/01 11:09:40 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/02 15:48:31 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	free_all(int split, char **argv, t_stack *a, t_stack *b)
 {
 	if (split == TRUE)
 		ft_free_split(argv);
+	while (a->prev)
+		a = a->prev;
 	free_list(a);
 	if (b)
 		free_list(b);
