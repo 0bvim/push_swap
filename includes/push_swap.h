@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/02 14:42:51 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/02 22:40:38 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ struct s_stack
 {
 	int		value;
 	int		split;
+	int		current_pos;
+	int		push_price;
+	bool	above_median;
+	bool	cheapest;
+	t_stack *target_node;
 	t_stack	*next;
 	t_stack	*prev;
 };
@@ -71,7 +76,11 @@ void	pb(t_stack **a, t_stack **b, bool checker);
 
 /* sorting */
 t_stack	*find_highest(t_stack *stack);
+t_stack	*find_smallest(t_stack *stack);
 bool	stack_sorted(t_stack *stack);
 void	tiny_sort(t_stack **a);
+void	push_swap(t_stack **a, t_stack **b);
+void	set_target_node(t_stack *a, t_stack *b);
+void	push_price(t_stack *a, t_stack *b);
 
 #endif
