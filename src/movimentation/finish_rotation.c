@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                     :+:      :+:    :+:   */
+/*   finish_rotation.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 16:50:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/02 20:32:21 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/02 23:19:13 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/02 23:24:22 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	push_swap(t_stack **a, t_stack **b)
+void	finish_rotation(t_stack **stack, t_stack *top_node, char stack_name)
 {
-	// t_stack	*smallest;
-	int			len_a;
-
-	len_a = stack_len(*a);
-	if (len_a == 5)
-		jackson_sort(a, b);
-	else
+	while(*stack != top_node)
 	{
-		while (len_a-- > 3)
-			pb(b, a, FALSE);
+		if (stack_name == 'a')
+		{
+			if (top_node->above_median)
+				ra(stack, FALSE);
+			else
+				rra(stack, FALSE);
+		}
+		else if (stack_name == 'b')
+		{
+			if (top_node->above_median)
+				rb(stack, FALSE);
+			else
+				rrb(stack, FALSE);
+		}
 	}
-	tiny_sort(a);
-	while (*b)
-	{
-		init_node(*a, *b);
-/* 		implemente function to move nodes */
-	}
-/* 	set curr position  */
-	return ;
 }

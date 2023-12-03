@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/02 22:40:38 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/02 23:20:47 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,10 @@ void	tiny_sort(t_stack **a);
 void	push_swap(t_stack **a, t_stack **b);
 void	set_target_node(t_stack *a, t_stack *b);
 void	push_price(t_stack *a, t_stack *b);
+void	set_current_position(t_stack *stack);
+void	jackson_sort(t_stack **a, t_stack **b);
+void	init_node(t_stack *a, t_stack *b);
+void	set_cheapest(t_stack *b);
+void	finish_rotation(t_stack **stack, t_stack *top_node, char stack_name);
 
 #endif

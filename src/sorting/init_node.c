@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                     :+:      :+:    :+:   */
+/*   init_node.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 16:50:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/02 20:32:21 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/02 23:04:16 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/02 23:17:34 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	push_swap(t_stack **a, t_stack **b)
+void	init_node(t_stack *a, t_stack *b)
 {
-	// t_stack	*smallest;
-	int			len_a;
-
-	len_a = stack_len(*a);
-	if (len_a == 5)
-		jackson_sort(a, b);
-	else
-	{
-		while (len_a-- > 3)
-			pb(b, a, FALSE);
-	}
-	tiny_sort(a);
-	while (*b)
-	{
-		init_node(*a, *b);
-/* 		implemente function to move nodes */
-	}
-/* 	set curr position  */
-	return ;
+	set_current_position(a);
+	set_current_position(b);
+	set_target_node(a, b);
+	push_price(a, b);
+	set_cheapest(b);
 }
