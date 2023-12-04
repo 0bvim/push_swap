@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 21:51:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/02 22:06:18 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/04 07:07:33 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	set_target_node(t_stack *a, t_stack *b)
 {
-	t_stack *curr_a;
-	t_stack *target_node;
+	t_stack	*curr_a;
+	t_stack	*target_node;
 	long	best_match_pos;
 
 	while (b)

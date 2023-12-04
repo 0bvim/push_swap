@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/02 23:20:47 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/04 07:09:03 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ struct s_stack
 	int		push_price;
 	bool	above_median;
 	bool	cheapest;
-	t_stack *target_node;
+	t_stack	*target_node;
 	t_stack	*next;
 	t_stack	*prev;
 };
