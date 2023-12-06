@@ -59,7 +59,7 @@ CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
 CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c \
 finish_rotation.c move_nodes.c)
 CFILES += $(addprefix $(NODES)/, nodes.c size.c init_node.c find.c \
-current_position.c set_cheapest.c push_price.c target_node.c)
+current_position.c set_cheapest.c push_price.c target_node.c return_cheapest.c)
 CFILES += $(addprefix $(SORT)/, tiny_sort.c is_sorted.c push_swap.c \
 jackson_sort.c)
 

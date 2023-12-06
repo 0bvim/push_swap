@@ -6,7 +6,7 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 11:08:57 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 16:04:06 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:12:47 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	free_all(int split, char **argv, t_stack *a, t_stack *b)
 {
 	if (split == TRUE)
 		ft_free_split(argv);
-	while (a->prev)
+	while (a->prev && (a->prev != a->prev->prev))
 		a = a->prev;
 	free_list(a);
 	if (b)

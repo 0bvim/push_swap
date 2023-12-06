@@ -6,7 +6,7 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 16:23:15 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:03:53 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void	pb(t_stack **a, t_stack **b, bool checker);
 /* sorting */
 t_stack	*find_highest(t_stack *stack);
 t_stack	*find_smallest(t_stack *stack);
+t_stack	*return_cheapest(t_stack *stack);
 bool	stack_sorted(t_stack *stack);
 void	tiny_sort(t_stack **a);
 void	push_swap(t_stack **a, t_stack **b);

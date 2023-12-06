@@ -32,7 +32,7 @@ void	push_swap(t_stack **a, t_stack **b)
 		move_nodes(a, b);
 	}
 	set_current_position(*a);
-	smallest = fint_smallest(*a);
+	smallest = find_smallest(*a);
 	if (smallest->above_median)
 		while (*a != smallest)
 			ra(a, false);
