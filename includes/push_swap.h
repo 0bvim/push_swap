@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/05 21:41:12 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/06 16:23:15 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ void	jackson_sort(t_stack **a, t_stack **b);
 void	init_node(t_stack *a, t_stack *b);
 void	set_cheapest(t_stack *b);
 void	finish_rotation(t_stack **stack, t_stack *top_node, char stack_name);
+void	move_nodes(t_stack **a, t_stack **b);
 
 #endif

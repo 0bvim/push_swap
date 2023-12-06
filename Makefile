@@ -57,11 +57,11 @@ LIBFT_PATH = lib/libft
 CFILES = $(addprefix $(ENTRANCE)/, main.c stack_init.c sort_select.c free_all.c)
 CFILES += $(addprefix $(VALIDATIONS)/, validations.c)
 CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c \
-finish_rotation.c)
-CFILES += $(addprefix $(NODES)/, nodes.c size.c)
-CFILES += $(addprefix $(SORT)/, tiny_sort.c is_sorted.c find.c push_swap.c \
-target_node.c push_price.c current_position.c jackson_sort.c init_node.c \
-set_cheapest.c)
+finish_rotation.c move_nodes.c)
+CFILES += $(addprefix $(NODES)/, nodes.c size.c init_node.c find.c \
+current_position.c set_cheapest.c push_price.c target_node.c)
+CFILES += $(addprefix $(SORT)/, tiny_sort.c is_sorted.c push_swap.c \
+jackson_sort.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 
@@ -133,9 +133,9 @@ endef
 
 define run_test
 	$(eval ARG = $(shell seq -2500 2500 | shuf -n $(1)))
-	./push_swap $(ARG) > a.txt; cat a.txt;
-	@echo -n "Instructions for  $(1) arguments: "; < a.txt wc -l
-	@rm a.txt
+	./push_swap $(ARG) > moves.txt; cat moves.txt;
+	@echo -n "Instructions for $(1) arguments: "; < moves.txt wc -l
+	@rm moves.txt
 endef
 
 define help
