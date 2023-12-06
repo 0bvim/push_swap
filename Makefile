@@ -131,6 +131,14 @@ define eraseBins
 	$(if $(BLIBNAME),@$(RM) $(BLIBNAME))
 endef
 
+define run_test
+	$(eval ARG = $(shell seq -2500 2500 | shuf -n $(1)))
+	./push_swap $(ARG)
+	@echo -n "Instructions for  $(1) arguments: "
+	@./push_swap $(ARG) | wc -l
+endef
+
+
 define help
 	@echo -e "$(GREEN)Available targets:$(RESET)"
 	@echo -e "$(CYAN)all:$(RESET) $(YELLOW)Build the program$(RESET)"
@@ -168,8 +176,11 @@ bonus:
 debug:
 	$(call debug)
 
+test_%: $(NAME)
+	@$(call run_test,$*)
+
 help:
 	$(call help)
 
-.PHONY: all bonus clean fclean re debug help Makefile
+.PHONY: all bonus clean fclean re debug help Makefile test_%
 .DEFAULT_GOAL := all

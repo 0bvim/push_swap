@@ -5,6 +5,7 @@
 		"stdio.h": "c",
 		"floatn.h": "c",
 		"stdbool.h": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"random": "c"
 	}
 }
