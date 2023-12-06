@@ -133,11 +133,10 @@ endef
 
 define run_test
 	$(eval ARG = $(shell seq -2500 2500 | shuf -n $(1)))
-	./push_swap $(ARG)
-	@echo -n "Instructions for  $(1) arguments: "
-	@./push_swap $(ARG) | wc -l
+	./push_swap $(ARG) > a.txt; cat a.txt;
+	@echo -n "Instructions for  $(1) arguments: "; < a.txt wc -l
+	@rm a.txt
 endef
-
 
 define help
 	@echo -e "$(GREEN)Available targets:$(RESET)"
