@@ -14,7 +14,7 @@
 
 void	push_swap(t_stack **a, t_stack **b)
 {
-	// t_stack	*smallest;
+	t_stack		*smallest;
 	int			len_a;
 
 	len_a = stack_len(*a);
@@ -29,8 +29,14 @@ void	push_swap(t_stack **a, t_stack **b)
 	while (*b)
 	{
 		init_node(*a, *b);
-/* 		implemente function to move nodes */
+		move_nodes(a, b);
 	}
-/* 	set curr position  */
-	return ;
+	set_current_position(*a);
+	smallest = fint_smallest(*a);
+	if (smallest->above_median)
+		while (*a != smallest)
+			ra(a, false);
+	else
+		while (*a != smallest)
+			rra(a, false);
 }
