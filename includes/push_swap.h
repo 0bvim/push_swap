@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 22:27:33 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/06 23:00:59 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "../lib/libft/includes/libft.h"
 # include <limits.h>
 # include <stdbool.h>
-# include <stdio.h>
 
 // struct and enums
 typedef struct s_stack	t_stack;
