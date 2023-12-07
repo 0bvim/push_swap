@@ -6,11 +6,14 @@
 /*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 16:14:06 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 16:58:43 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:42:15 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
+
+static void	rotate_both(t_stack **a, t_stack **b, t_stack *cheap_node);
+static void	reverse_rotate_both(t_stack **a, t_stack **b, t_stack *cheap_node);
 
 void	move_nodes(t_stack **a, t_stack **b)
 {
@@ -18,10 +21,26 @@ void	move_nodes(t_stack **a, t_stack **b)
 
 	cheap = return_cheapest(*b);
 	if (cheap->above_median && cheap->target_node->above_median)
-		rr(a, b, cheap);
+		rotate_both(a, b, cheap);
 	else if (!(cheap->above_median) && !(cheap->target_node->above_median))
-		rrr(a, b, cheap);
+		reverse_rotate_both(a, b, cheap);
 	finish_rotation(b, cheap, 'b');
 	finish_rotation(a, cheap->target_node, 'a');
 	pa(a, b, false);
+}
+
+static void	rotate_both(t_stack **a, t_stack **b, t_stack *cheap_node)
+{
+	while (*a != cheap_node->target_node && *b != cheap_node)
+		rr(a, b, false);
+	set_current_position(*a);
+	set_current_position(*b);
+}
+
+static void	reverse_rotate_both(t_stack **a, t_stack **b, t_stack *cheap_node)
+{
+	while (*a != cheap_node->target_node && *b != cheap_node)
+		rrr(a, b, false);
+	set_current_position(*a);
+	set_current_position(*b);
 }

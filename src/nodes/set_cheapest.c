@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   set_cheapest.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 23:08:43 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/04 07:04:05 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/07 01:45:06 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	set_cheapest(t_stack *b)
 	long	best_match_value;
 	t_stack	*best_match_node;
 
+	best_match_node = NULL;
 	if (NULL == b)
 		return ;
 	best_match_value = LONG_MAX;

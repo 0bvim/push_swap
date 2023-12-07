@@ -30,7 +30,7 @@ COMP = Compiling
 
 # debug and normal flags #
 DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
-CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP #-fsanitize=address # TO IMPROVE PERFORMANCE
+CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP # FOR DEPENDENCIES
 LFLAGS = -march=native # TO OPTIMIZE FOR SPECIFIC ARCHITECTURE
 
 # paths #
@@ -133,7 +133,7 @@ endef
 
 define run_test
 	$(eval ARG = $(shell seq -2500 2500 | shuf -n $(1)))
-	./push_swap $(ARG) > moves.txt; cat moves.txt;
+	./push_swap $(ARG) > moves.txt; cat moves.txt; echo $(ARG) > nbs.txt
 	@echo -n "Instructions for $(1) arguments: "; < moves.txt wc -l
 	@rm moves.txt
 endef
