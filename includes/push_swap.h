@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 17:03:53 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/06 22:27:33 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@ typedef struct s_stack	t_stack;
 struct s_stack
 {
 	int		value;
-	int		split;
-	int		current_pos;
+	int		index;
+	int		pos;
+	int		target_pos;
+	int		cost_a;
+	int		cost_b;
 	int		push_price;
 	bool	above_median;
 	bool	cheapest;
@@ -44,7 +47,7 @@ typedef enum e_my_boo
 
 /* startup functions */
 int		validation_two(char **argv);
-int		free_all(int split, char **argv, t_stack *a, t_stack *b);
+int		free_all(t_stack *a, t_stack *b);
 void	stack_init(t_stack **a, char **argv, bool flag);
 void	sort_select(t_stack *a, t_stack *b);
 

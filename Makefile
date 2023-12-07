@@ -30,7 +30,7 @@ COMP = Compiling
 
 # debug and normal flags #
 DFLAGS = -Wall -Wextra -Werror -g3 # TO DEBBUG
-CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP #-fsanitize=address # TO IMPROVE PERFORMANCE
+CFLAGS = -Wall -Werror -Wextra -g3 -Ofast -flto -MD -MP -fsanitize=address # TO IMPROVE PERFORMANCE
 LFLAGS = -march=native # TO OPTIMIZE FOR SPECIFIC ARCHITECTURE
 
 # paths #

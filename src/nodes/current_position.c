@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 22:52:41 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/04 07:05:37 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/06 21:17:15 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	set_current_position(t_stack *stack)
 	mid_stack = stack_len(stack) / 2;
 	while (stack)
 	{
-		stack->current_pos = i;
+		stack->pos = i;
 		if (i <= mid_stack)
 			stack->above_median = TRUE;
 		else
