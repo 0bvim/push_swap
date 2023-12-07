@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 23:00:59 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/06 23:17:19 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int		validation_two(char **argv);
 int		free_all(t_stack *a, t_stack *b);
 void	stack_init(t_stack **a, char **argv, bool flag);
 void	sort_select(t_stack *a, t_stack *b);
+void	set_index(t_stack *stack, size_t size);
 
 /* handle nodes */
 void	free_list(t_stack *head);
