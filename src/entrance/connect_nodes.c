@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   connect_nodes.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/08 16:27:26 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/08 16:11:46 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/08 16:15:59 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	main(int argc, char *argv[])
+void	connect_nodes(t_node **tmp, t_node **node, t_stack **stack)
 {
-	t_stack	*a;
-	t_stack	*b;
-
-	if (argc > 1)
+	if (!*node)
 	{
-		a = init_stack();
-		a->top = fill_stack(argc, argv, &a);
-		check_dup(a->top);
-		b = init_stack();
-/* 		if (is_sorted(a))
-		{ need to implemented this commented part
-			free_all(a, b);
-			return (EXIT_SUCCESS);
-		}
-		push_swap(a, b);
-		free_all(a, b); */
+		*node = *tmp;
+		(*stack)->top = *node;
 	}
-	return (EXIT_SUCCESS);
+	else
+	{
+		(*node)->next = *tmp;
+		(*tmp)->prev = *node;
+		*node = (*node)->next;
+	}
 }
+

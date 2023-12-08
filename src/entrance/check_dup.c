@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_dup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/08 16:27:26 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/08 16:21:27 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/08 16:23:00 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	main(int argc, char *argv[])
+void	check_dup(t_node *a)
 {
-	t_stack	*a;
-	t_stack	*b;
+	int		current_value;
+	t_node	*tmp;
 
-	if (argc > 1)
+	while (a->next)
 	{
-		a = init_stack();
-		a->top = fill_stack(argc, argv, &a);
-		check_dup(a->top);
-		b = init_stack();
-/* 		if (is_sorted(a))
-		{ need to implemented this commented part
-			free_all(a, b);
-			return (EXIT_SUCCESS);
+		tmp = a->next;
+		current_value = a->value;
+		while (tmp)
+		{
+			if (tmp->value == current_value)
+				print_error();
+			if (tmp->next)
+				tmp = tmp->next;
+			else
+				break ;
 		}
-		push_swap(a, b);
-		free_all(a, b); */
+		a = a->next;
 	}
-	return (EXIT_SUCCESS);
+	while (a->prev)
+		a = a->prev;
 }

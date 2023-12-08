@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/08 16:27:26 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/08 15:19:35 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/08 16:17:52 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	main(int argc, char *argv[])
+t_node	*fill_stack(int ac, char **av, t_stack **stack)
 {
-	t_stack	*a;
-	t_stack	*b;
+	int	i;
+	int	ret;
+	t_node	*node;
 
-	if (argc > 1)
+	i = 0;
+	node = NULL;
+	while (++i < ac)
 	{
-		a = init_stack();
-		a->top = fill_stack(argc, argv, &a);
-		check_dup(a->top);
-		b = init_stack();
-/* 		if (is_sorted(a))
-		{ need to implemented this commented part
-			free_all(a, b);
-			return (EXIT_SUCCESS);
-		}
-		push_swap(a, b);
-		free_all(a, b); */
+		ret = set_node(av[i], &node, stack);
+		if (!ret)
+			print_error();
 	}
-	return (EXIT_SUCCESS);
+	if (!node->next)
+		(*stack)->bottom = node;
+	while (node->prev)
+		node = node->prev;
+	return (node);
 }
