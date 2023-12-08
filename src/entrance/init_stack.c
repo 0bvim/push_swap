@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                     :+:      :+:    :+:   */
+/*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 16:50:18 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/02 20:32:21 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/08 10:40:28 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/08 10:48:49 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	push_swap(t_stack **a, t_stack **b)
+t_stack	*init_stack(void)
 {
-	t_stack		*smallest;
-	int			len_a;
+	t_stack	*ptr;
 
-	len_a = stack_len(*a);
-	if (len_a == 5)
-		jackson_sort(a, b);
-	else
-	{
-		while (len_a-- > 3)
-			pb(b, a, FALSE);
-	}
-	tiny_sort(a);
-	while (*b)
-	{
-		init_node(*a, *b);
-		move_nodes(a, b);
-	}
-	set_current_position(*a);
-	smallest = find_smallest(*a);
-	if (smallest->above_median)
-		while (*a != smallest)
-			ra(a, false);
-	else
-		while (*a != smallest)
-			rra(a, false);
+	ptr = malloc(sizeof(t_stack));
+	if (!ptr)
+		return (NULL);
+	ptr->size = 0;
+	ptr->top = NULL;
+	ptr->bottom = NULL;
+	return (ptr);
 }
