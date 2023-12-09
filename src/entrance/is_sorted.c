@@ -3,24 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 20:33:47 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/08 15:19:12 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/09 01:52:31 by nivicius          #+#    #+#             */
+/*   Updated: 2023/12/09 01:53:31 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-bool	stack_sorted(t_stack *stack)
+int	is_sorted(t_stack *a)
 {
-	if (NULL == stack)
-		return (TRUE);
-	while (stack->s)
+	t_node	*node;
+
+	node = a->top;
+	while (node)
 	{
-		if (stack->value > stack->next->value)
-			return (FALSE);
-		stack = stack->next;
+		if (node->next)
+		{
+			if (node->value > node->next->value)
+				return (FALSE);
+		}
+		if (node->next)
+			node = node->next;
+		else
+			break ;
 	}
-	return (TRUE);
+	if (node->value == a->bottom->value)
+		return (TRUE);
+	else
+		return (FALSE);
 }

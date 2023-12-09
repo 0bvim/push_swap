@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/08 16:23:09 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 01:54:14 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ t_node	*fill_stack(int ac, char **av, t_stack **stack);
 void	check_dup(t_node *a);
 void	connect_nodes(t_node **tmp, t_node **node, t_stack **stack);
 int		set_node(char *argv, t_node **node, t_stack **stack);
+int		is_sorted(t_stack *a);
 
 /* handle errors */
 int		free_all(t_stack *a, t_stack *b);
