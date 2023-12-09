@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/09 02:00:12 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/09 15:17:39 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ void	check_dup(t_node *a);
 void	connect_nodes(t_node **tmp, t_node **node, t_stack **stack);
 int		set_node(char *argv, t_node **node, t_stack **stack);
 int		is_sorted(t_stack *a);
+int		get_min(t_node *node, int size);
+int		get_max(t_node *node, int size);
+void	init_values(t_value *var);
+void	select_pivots(int	stack_size, t_stack *stack, t_value *var);
+void	push_swap(t_stack *a, t_stack *b);
 
 /* handle errors */
 int		free_all(t_stack *a, t_stack *b);
