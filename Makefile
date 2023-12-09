@@ -65,6 +65,7 @@ jackson_sort.c)
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 
+VAL = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt
 VAL_TXT = valgrind-out.txt
 
 # obj dir #
@@ -133,7 +134,7 @@ endef
 
 define run_test
 	$(eval ARG = $(shell seq -2500 2500 | shuf -n $(1)))
-	./push_swap $(ARG) > moves.txt; cat moves.txt; echo $(ARG) > nbs.txt
+	$(VAL) ./push_swap $(ARG) > moves.txt; cat moves.txt; echo $(ARG) > nbs.txt
 	@echo -n "Instructions for $(1) arguments: "; < moves.txt wc -l
 	@rm moves.txt
 endef
