@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   jackson_five.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 21:25:38 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/09 20:48:37 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/09 15:23:00 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/09 20:50:29 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	main(int argc, char *argv[])
+void	five_handler(t_stack *a, t_stack *b)
 {
-	t_stack	*a;
-	t_stack	*b;
+	int	pb;
+	int	mid;
 
-	if (argc > 1)
+	pb = 0;
+	mid = get_mid_five(a->top);
+	while (TRUE)
 	{
-		a = init_stack();
-		a->top = fill_stack(argc, argv, &a);
-		check_dup(a->top);
-		b = init_stack();
-		if (is_sorted(a))
+		if (a->top->value < mid)
 		{
-			free_all(a, b);
-			return (EXIT_SUCCESS);
+			push_stack(a, b, B);
+			pb++;
 		}
-		push_swap(a, b);
-		free_all(a, b);
+		else
+			rotate_stack(a, A);
+		if (pb == 2)
+			break ;
 	}
-	return (EXIT_SUCCESS);
+	three_handler_a(3, a);
+	two_handler(a, b, B);
 }
