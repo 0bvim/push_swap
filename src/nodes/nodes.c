@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:59:48 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/02 15:38:11 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/08 21:42:53 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	append_node(t_stack **stack, int nbr)
 		return ;
 	node->next = NULL;
 	node->value = nbr;
+	node->cheapest = FALSE;
 	if (NULL == *stack)
 	{
 		*stack = node;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:22:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/30 11:20:54 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/08 23:33:08 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ static int	check_argv(char *argv)
 		return (TRUE);
 	if (*argv == '-' || *argv == '+')
 		argv++;
+	if (*argv == '\0')
+		return (TRUE);
 	while (*argv)
 		if (!ft_isdigit(*argv++))
 			return (TRUE);
