@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/09 20:49:45 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:03:18 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ void	init_values(t_value *var);
 void	select_pivots(int	stack_size, t_stack *stack, t_value *var);
 void	push_swap(t_stack *a, t_stack *b);
 void	five_handler(t_stack *a, t_stack *b);
+void	push_stack(t_stack *from, t_stack *to, int flag);
+void	rotate_stack(t_stack *stack, int flag);
+void	rotate_both_stack(t_stack *a, t_stack *b, int flag);
+void	reverse_rotate_stack(t_stack *stack, int flag);
+void	reverse_rotate_both_stack(t_stack *a, t_stack *b, int flag);
 
 /* handle errors */
 int		free_all(t_stack *a, t_stack *b);
