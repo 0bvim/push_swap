@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_nodes.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 16:14:06 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/08 21:42:56 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/10 12:15:35 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	reverse_rotate_both(t_stack **a, t_stack **b, t_stack *cheap_node);
 void	move_nodes(t_stack **a, t_stack **b)
 {
 	t_stack	*cheap;
-	
+
 	cheap = return_cheapest(*b);
 	if (cheap->above_median && cheap->target_node->above_median)
 		rotate_both(a, b, cheap);
