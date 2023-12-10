@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:31:39 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/09 23:12:58 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 23:42:59 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	print_error(void)
 {
 	ft_putstr_fd("Error\n", ERR);
+	exit (EXIT_FAILURE);
 }

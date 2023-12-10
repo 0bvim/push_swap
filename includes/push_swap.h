@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/09 23:22:46 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 23:34:08 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void	init_values(t_value *var);
 void	select_pivots(int stack_size, t_stack *stack, t_value *var);
 void	push_swap(t_stack *a, t_stack *b);
 void	five_handler(t_stack *a, t_stack *b);
+void	sort_five_handler(int size, t_stack *a, t_stack *b, int flag);
 void	push_stack(t_stack *from, t_stack *to, int flag);
 void	rotate_stack(t_stack *stack, int flag);
 void	rotate_both_stack(t_stack *a, t_stack *b, int flag);
@@ -86,6 +87,8 @@ void	two_handler(t_stack *a, t_stack *b, int flag);
 void	under_three_handler(int r, t_stack *a, t_stack *b, int flag);
 void	a_to_b(int stack_size, t_stack *a, t_stack *b, int *count);
 void	b_to_a(int r, t_stack *a, t_stack *b, int *count);
+void	swap_stack(t_stack *stack, int flag);
+void	swap_both_stack(t_stack *a, t_stack *b, int flag);
 t_node	*init_node(void);
 
 /* handle errors */
