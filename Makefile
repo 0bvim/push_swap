@@ -152,9 +152,9 @@ endef
 
 define help
 	@echo -e "$(GREEN)Available targets:$(RESET)"
-	@echo -e "$(CYAN)all:$(RESET) $(YELLOW)Build both program$(RESET)"
-	@echo -e "$(CYAN)both:$(RESET) $(YELLOW)Build both parts$(RESET)"
-	@echo -e "$(CYAN)bonus:$(RESET) $(MAGENTA)Build the bonus program$(RESET)"
+	@echo -e "$(CYAN)all:$(RESET) $(YELLOW)Build push swap program$(RESET)"
+	@echo -e "$(CYAN)both:$(RESET) $(YELLOW)Build push swap and checker $(RESET)"
+	@echo -e "$(CYAN)bonus:$(RESET) $(MAGENTA)Build checker$(RESET)"
 	@echo -e "$(CYAN)clean:$(RESET) $(RED)Remove the object files$(RESET)"
 	@echo -e "$(CYAN)fclean:$(RESET) $(RED)Remove the program and the object files$(RESET)"
 	@echo -e "$(CYAN)re:$(RESET) $(YELLOW)Rebuild the program$(RESET)"
