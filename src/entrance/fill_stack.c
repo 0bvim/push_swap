@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:19:35 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/10 00:30:25 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/10 04:10:11 by nivicius         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,11 @@ t_node	*fill_stack(int ac, char **av, t_stack **stack)
 				free(node);
 			if (stack)
 			{
-				while (stack[i])
-				{
-					free(stack[i]);
-					stack[i] = NULL;
-					i++;	
-				}
+
+				free(stack[i]);
+				stack[i] = NULL;
+				i++;	
+				
 			}
 			print_error();
 		}

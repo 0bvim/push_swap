@@ -10,8 +10,7 @@
 			"request": "launch",
 			"program": "${workspaceFolder}/push_swap",
 			"args": [
-				"",
-				"2"
+				"1"
 			],
 			"stopAtEntry": true,
 			"cwd": "${fileDirname}",
