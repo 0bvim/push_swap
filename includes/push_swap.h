@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/09 21:03:18 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:12:54 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,12 @@ void	rotate_stack(t_stack *stack, int flag);
 void	rotate_both_stack(t_stack *a, t_stack *b, int flag);
 void	reverse_rotate_stack(t_stack *stack, int flag);
 void	reverse_rotate_both_stack(t_stack *a, t_stack *b, int flag);
+void	three_handler_a(int r, t_stack *a);
+void	three_handler_b(int r, t_stack *a, t_stack *b);
+void	three_top_min_b(t_stack *b, int max);
+void	three_mid_min_b(t_stack *b, int max);
+void	three_bottom_min_b(t_stack *b, int max);
+
 
 /* handle errors */
 int		free_all(t_stack *a, t_stack *b);
