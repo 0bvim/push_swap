@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 21:09:59 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/09 21:26:15 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 22:40:02 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	three_handler_b(int r, t_stack *a, t_stack *b)
 	int	min;
 	int	max;
 
-	min = get_min_value(b->top, r);
-	max = get_max_value(b->top, r);
+	min = get_min(b->top, r);
+	max = get_max(b->top, r);
 	if (b->top->value == min)
 		three_top_min_b(b, max);
 	else if (b->top->next->value == min)
