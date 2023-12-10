@@ -6,15 +6,11 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 21:09:59 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/09 21:12:32 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:26:15 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
-
-void	three_top_min_b(t_stack *b, int max);
-void	three_mid_min_b(t_stack *b, int max);
-void	three_bottom_min_b(t_stack *b, int max);
 
 void	three_handler_b(int r, t_stack *a, t_stack *b)
 {
@@ -76,5 +72,3 @@ void	three_bottom_min_b(t_stack *b, int max)
 	if (b->top->next->value == max)
 		swap_stack(b, B);
 }
-
-

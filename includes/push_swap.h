@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/09 21:12:54 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:49:32 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ struct	s_node
 	t_node	*next;
 };
 
-typedef struct s_stack
+struct s_stack
 {
 	int		size;
 	t_node	*top;
@@ -69,7 +69,7 @@ int		get_min(t_node *node, int size);
 int		get_max(t_node *node, int size);
 int		get_mid_five(t_node *node);
 void	init_values(t_value *var);
-void	select_pivots(int	stack_size, t_stack *stack, t_value *var);
+void	select_pivots(int stack_size, t_stack *stack, t_value *var);
 void	push_swap(t_stack *a, t_stack *b);
 void	five_handler(t_stack *a, t_stack *b);
 void	push_stack(t_stack *from, t_stack *to, int flag);
@@ -82,11 +82,12 @@ void	three_handler_b(int r, t_stack *a, t_stack *b);
 void	three_top_min_b(t_stack *b, int max);
 void	three_mid_min_b(t_stack *b, int max);
 void	three_bottom_min_b(t_stack *b, int max);
-
+void	two_handler(t_stack *a, t_stack *b, int flag);
+void	under_three_handler(int r, t_stack *a, t_stack *b, int flag);
 
 /* handle errors */
 int		free_all(t_stack *a, t_stack *b);
-void	print_error();
+void	print_error(void);
 
 /* handle nodes */
 void	free_list(t_stack *head);

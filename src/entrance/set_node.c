@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:27:52 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/08 16:15:49 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:47:58 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ int	set_node(char *argv, t_node **node, t_stack **stack)
 		}
 		tmp->value = atol(args[i]);
 		connect_nodes(&tmp, node, stack);
-		(*stack)->size++;
-		//maybe need of free in each element
+		(*stack)->size++; // maybe need to free each time
 	}
 	ft_free_split(args);
 	return (FALSE);

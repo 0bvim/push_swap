@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:47:43 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/09 15:17:01 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:29:53 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	init_values(t_value *var)
 	var->pb = 0;
 }
 
-void	select_pivots(int	stack_size, t_stack *stack, t_value *var)
+void	select_pivots(int stack_size, t_stack *stack, t_value *var)
 {
 	long	min;
 	long	max;

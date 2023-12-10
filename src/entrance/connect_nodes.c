@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:11:46 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/08 16:15:59 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 21:26:52 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	connect_nodes(t_node **tmp, t_node **node, t_stack **stack)
 		*node = (*node)->next;
 	}
 }
-
