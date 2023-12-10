@@ -51,7 +51,7 @@ LBONUS = Bonus Program compiled
 CLEAN = Objects delete
 FCLEAN = Program delete
 LIBNAME = push_swap
-BLIBNAME = push_swap_bonus
+BLIBNAME = checker
 COMP = Compiling
 
 # debug and normal flags #
@@ -89,7 +89,7 @@ current_position.c set_cheapest.c push_price.c target_node.c return_cheapest.c)
 CFILES += $(addprefix $(SORT)/, tiny_sort.c is_sorted.c push_swap.c \
 jackson_sort.c)
 
-BFILES = $(addprefix $(BONUS)/, main_bonus.c)
+BFILES = $(addprefix $(BONUS)/, checker.c)
 
 VAL = valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --log-file=valgrind-out.txt
 VAL_TXT = valgrind-out.txt
