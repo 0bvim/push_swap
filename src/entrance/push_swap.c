@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:47:43 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/09 21:29:53 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 23:23:29 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ void	push_swap(t_stack *a, t_stack *b)
 	if (a->size == 5)
 		five_handler(a, b);
 	else
-		pa_to_pb(a->size, a, b, &count);
+		a_to_b(a->size, a, b, &count);
 }

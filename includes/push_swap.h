@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/09 22:45:27 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/09 23:22:46 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,11 @@ void	three_bottom_min_b(t_stack *b, int max);
 void	two_handler(t_stack *a, t_stack *b, int flag);
 void	under_three_handler(int r, t_stack *a, t_stack *b, int flag);
 void	a_to_b(int stack_size, t_stack *a, t_stack *b, int *count);
+void	b_to_a(int r, t_stack *a, t_stack *b, int *count);
+t_node	*init_node(void);
 
 /* handle errors */
-int		free_all(t_stack *a, t_stack *b);
+void	free_all(t_stack *a, t_stack *b);
 void	print_error(void);
 
 /* handle nodes */

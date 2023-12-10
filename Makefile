@@ -56,12 +56,11 @@ LIBFT_PATH = lib/libft
 # files #
 CFILES = $(addprefix $(ENTRANCE)/, main.c init_stack.c fill_stack.c print_error.c \
 connect_nodes.c set_node.c check_dup.c is_sorted.c free_all.c push_swap.c jackson_five.c \
-push_pop.c rotate_stack.c three_stack_a.c handle_two.c a_to_b.c)
+push_pop.c rotate_stack.c three_stack_a.c handle_two.c a_to_b.c b_to_a.c init_node.c)
 CFILES += $(addprefix $(VALIDATIONS)/, )
-CFILES += $(addprefix $(MOVIMENTATION)/, push.c rev_rotate.c rotate.c swap.c)
-CFILES += $(addprefix $(NODES)/, get_values.c target_node.c return_cheapest.c)
-CFILES += $(addprefix $(SORT)/, tiny_sort.c push_swap.c \
-jackson_sort.c)
+CFILES += $(addprefix $(MOVIMENTATION)/, )
+CFILES += $(addprefix $(NODES)/, get_values.c)
+CFILES += $(addprefix $(SORT)/, )
 
 BFILES = $(addprefix $(BONUS)/, main_bonus.c)
 
