@@ -1,20 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 10:59:34 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/10 23:18:09 by vde-frei         ###   ########.fr       */
+/*   Created: 2023/12/10 23:14:11 by vde-frei          #+#    #+#             */
+/*   Updated: 2023/12/10 23:14:25 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#include "../../includes/checker.h"
 
-/* includes */
-# include "push_swap.h"
-# include <fcntl.h>
-
-#endif
