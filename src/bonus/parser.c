@@ -6,11 +6,14 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 23:14:11 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/10 23:53:46 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/11 01:32:08 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/checker.h"
+
+static int	simple_comp(char *str1, char *str2);
+static void	handle_error(t_stack **a, t_stack **b);
 
 void	parse_command(t_stack **a, t_stack **b, char *command)
 {
