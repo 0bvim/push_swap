@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:25:23 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/10 23:28:13 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/11 01:29:09 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char *argv[])
 		exit(EXIT_SUCCESS);
 	else if (2 == argc)
 		argv = ft_split(argv[1], 0x20);
-	stack_init(&a, argv + 1, 2 == argc);
+	stack_init(&a, argv, 2 == argc);
 	len = stack_len(a);
 	next_line = get_next_line(IN);
 	while (next_line)
