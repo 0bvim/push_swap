@@ -6,18 +6,20 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:25:23 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/12/10 21:27:06 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/10 23:28:13 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/checker.h"
+
+static void	free_checker(char **argv, t_stack *a);
 
 int	main(int argc, char *argv[])
 {
 	t_stack	*a;
 	t_stack	*b;
 	char	*next_line;
-	int		len;
+	size_t	len;
 
 	a = NULL;
 	b = NULL;
@@ -33,10 +35,19 @@ int	main(int argc, char *argv[])
 		parse_command(&a, &b, next_line);
 		next_line = get_next_line(IN);
 	}
-	if (stack_sorted(a) && stack_len(a) == len)
+	if (stack_sorted(a) && (stack_len(a) == len))
 		ft_putstr_fd("OK\n", OUT);
 	else
 		ft_putstr_fd("KO\n", OUT);
-	((free(a)) && ft_free_split(argv));
-	return (0);
+	free_checker(argv, a);
+	return (EXIT_SUCCESS);
+}
+
+static void	free_checker(char **argv, t_stack *a)
+{
+	if (argv)
+		ft_free_split(argv);
+	while (a->prev && (a->prev != a->prev->prev))
+		a = a->prev;
+	free_list(a);
 }
