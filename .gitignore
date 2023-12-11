@@ -52,3 +52,5 @@ Mkfile.old
 dkms.conf
 push_swap_averager
 push_swap_visualizer
+push_swap
+checker
