@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 03:43:01 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/26 12:18:23 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:19:53 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	swap(t_stack **head)
 {
-	if (NULL == *head || NULL == head)
+	if (NULL == *head || NULL == head || (stack_len(*head) < 2))
 		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;
