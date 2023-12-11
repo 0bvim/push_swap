@@ -6,7 +6,7 @@
 /*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 03:43:30 by vde-frei          #+#    #+#             */
-/*   Updated: 2023/11/26 16:15:01 by vde-frei         ###   ########.fr       */
+/*   Updated: 2023/12/11 14:18:36 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	rev_rotate(t_stack **head)
 {
 	t_stack	*last_node;
 
-	if (NULL == *head || NULL == head)
+	if (NULL == *head || NULL == head || (stack_len(*head) < 2))
 		return ;
 	last_node = find_last_node(*head);
 	last_node->prev->next = NULL;
