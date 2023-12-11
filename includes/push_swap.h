@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nivicius <nivicius@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vde-frei <vde-frei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 07:00:51 by nivicius          #+#    #+#             */
-/*   Updated: 2023/12/06 17:03:53 by nivicius         ###   ########.fr       */
+/*   Updated: 2023/12/11 00:23:10 by vde-frei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-// includes
+/* includes */
 # include "../lib/libft/includes/libft.h"
 # include <limits.h>
 # include <stdbool.h>
@@ -39,7 +39,8 @@ typedef enum e_my_boo
 	FALSE,
 	TRUE,
 	ERR,
-	OUT = 1,
+	IN = 0,
+	OUT,
 }		t_my_boo;
 
 /* startup functions */
