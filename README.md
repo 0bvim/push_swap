@@ -1,6 +1,6 @@
 ![push_swap](../../../42-project-badges/blob/main/covers/cover-push_swap-bonus.png)
 
-![eng](../../../stuff/blob/main/USA-icon.png) [![pt-BR](../../../stuff/blob/main/Brazil-icon.png)](README.pt-BR.md)
+[![eng](../../../stuff/blob/main/USA-icon.png)](README.md) [![pt-BR](../../../stuff/blob/main/Brazil-icon.png)](README.pt-BR.md)
 
 # push_swap
 This project will make you sort data on a stack, with a limited set of instructions, using
