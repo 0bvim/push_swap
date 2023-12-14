@@ -3,10 +3,10 @@
 [![eng](../../../stuff/blob/main/USA-icon.png)](README.md) [![pt-BR](../../../stuff/blob/main/Brazil-icon.png)](README.pt-BR.md)
 
 # push_swap
-This project will make you sort data on a stack, with a limited set of instructions, using
-the lowest possible number of actions. To succeed you’ll have to manipulate various
-types of algorithms and choose the most appropriate solution (out of many) for an
-optimized data sorting.
+Este projeto fará com que você classifique os dados em uma pilha, com um conjunto limitado de instruções, usando
+o menor número possível de ações. Para ter sucesso, você terá que manipular vários
+tipos de algoritmos e escolher a solução mais apropriada (entre muitas) para um
+classificação otimizada de dados.
 
 ### Discription of mandatory part
 some stuff here
