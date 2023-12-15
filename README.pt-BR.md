@@ -46,7 +46,7 @@ $ ./push_swap 5 2 3 1 2
 $ ./push_swap --2 3 5 1
 $ ./push_swap -2- 3 7 9
 ```
-> :bulb: **Dica:** Realize mais testes e validaçoes de com entras diferentes
+> :bulb: **Dica:** Realize mais testes e validaçoes com entradas diferentes
 
 ### Discription of bonus part
 talk about bonus part
