@@ -59,6 +59,6 @@ $> insert command prototype
 ```
 ## Download
 ```ssh
-git@github.com:vinicius-f-pereira/pipex.git
+git@github.com:vinicius-f-pereira/push_swap.git
 ```
 Use `make` or `make bonus` and follow instructions [`Here`](#discription-of-mandatory-part)
