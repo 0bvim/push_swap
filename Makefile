@@ -122,33 +122,33 @@ endif
 
 # functions #
 define create_objects_dir
-	@mkdir -p $(dir $@)
+	mkdir -p $(dir $@)
 endef
 
 define compile
-	@$(CC) -o $(NAME) $(CFLAGS) $(LFLAGS) $(INCLUDES) $(LINCLUDES) $(OBJECT) $(BIN_OBJ) $(LIBFT)
-	@$(SLEEP)
-	@printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
+	$(CC) -o $(NAME) $(CFLAGS) $(LFLAGS) $(INCLUDES) $(LINCLUDES) $(OBJECT) $(BIN_OBJ) $(LIBFT)
+	$(SLEEP)
+	printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
 endef
 
 define compile_bonus
-	@$(CC) -o $(NAME) $(CFLAGS) $(LFLAGS) $(INCLUDES) $(LINCLUDES) $(OBJECT) $(BIN_OBJ) $(LIBFT)
-	@$(SLEEP)
-	@printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
+	$(CC) -o $(NAME) $(CFLAGS) $(LFLAGS) $(INCLUDES) $(LINCLUDES) $(OBJECT) $(BIN_OBJ) $(LIBFT)
+	$(SLEEP)
+	printf "\n$(MAGENTA)$(MANDATORY)\n$(RESET)"
 endef
 
 define compile_source
-	@$(eval COUNT=$(shell expr $(COUNT) + 1))
-	@$(MAKE) -sC $(LIBFT_PATH)
-	@$(CC) -o $@ $(CFLAGS) $(INCLUDES) -c $<
-	@printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
+	$(eval COUNT=$(shell expr $(COUNT) + 1))
+	$(MAKE) -sC $(LIBFT_PATH)
+	$(CC) -o $@ $(CFLAGS) $(INCLUDES) -c $<
+	printf "$(GREEN)$(LIBNAME) $(COMP) %d%%\r$(RESET)" $$(echo $$(($(COUNT) * 100 / $(words $(CFILES)))))
 endef
 
 define clean
-	@$(MAKE) fclean -sC $(LIBFT_PATH)
-	@$(RM) -rf $(OBJ)/ && $(RM) -rf $(VAL_TXT)
-	@$(SLEEP)
-	@printf "$(RED)$(CLEAN)$(RESET)\n"
+	$(MAKE) fclean -sC $(LIBFT_PATH)
+	$(RM) -rf $(OBJ)/ && $(RM) -rf $(VAL_TXT)
+	$(SLEEP)
+	printf "$(RED)$(CLEAN)$(RESET)\n"
 endef
 
 define fclean
@@ -164,7 +164,7 @@ endef
 define debug
 	$(call clean)
 	$(call fclean)
-	@$(MAKE) WITH_DEBBUG=TRUE -s
+	$(MAKE) WITH_DEBBUG=TRUE -s
 endef
 
 define eraseBins
@@ -180,12 +180,12 @@ define run_test
 endef
 
 define print_sequence
-	@printf "$(YELLOW)Best and worst case examples. To get average of operations\nYou need Sum results and divide by 2\n $(RESET)"
-	@printf "Best Case:\n"
-		@printf "$(GREEN)%s $(RESET)" $(BEST_CASE)
-	@printf "\nWorst Case:\n"
-		@printf "$(RED)%s $(RESET)" $(WORST_CASE)
-	@printf "\n"
+	printf "$(YELLOW)Best and worst case examples. To get average of operations\nYou need Sum results and divide by 2\n $(RESET)"
+	printf "Best Case:\n"
+		printf "$(GREEN)%s $(RESET)" $(BEST_CASE)
+	printf "\nWorst Case:\n"
+		printf "$(RED)%s $(RESET)" $(WORST_CASE)
+	printf "\n"
 endef
 
 define help
@@ -231,10 +231,10 @@ debug:
 	$(call debug)
 
 test_%: $(NAME)
-	@$(call run_test,$*)
+	$(call run_test,$*)
 
 case:
-	@$(call print_sequence)
+	$(call print_sequence)
 
 help:
 	$(call help)
