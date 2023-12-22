@@ -43,12 +43,15 @@ Error # when have empty string or invalid args
 ```
 
 ## Download
+### ssh
 ```ssh
 git clone git@github.com:vinicius-f-pereira/push_swap.git
 ```
+### https
 ```bash
 git clone https://github.com/vinicius-f-pereira/push_swap.git
 ```
+### github cli (gh)
 ```bash
 gh repo clone vinicius-f-pereira/push_swap
 ```
