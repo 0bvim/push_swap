@@ -48,17 +48,42 @@ $ ./push_swap -2- 3 7 9
 ```
 > :bulb: **Dica:** Realize mais testes e validaçoes com entradas diferentes
 
-### Discription of bonus part
-talk about bonus part
+### Descrição da parte de bônus
+Precisamos criar um programa chamado 'verificador'. Esse programa verifica se a lista de instruções gerada pelo programa push_swap esta realmente ordenada.
 ```bash
-$ insert command prototype
-```
-more about bonus
-```bash
-$> insert command prototype
-```
-## Download
-```ssh
-git@github.com:vinicius-f-pereira/push_swap.git
+$>./checker 3 2 1 0
+rra
+pb
+sa
+rra
+pa
+OK # exibe 'OK' se a lista foi organizada corretamente.
+
+$>./checker 3 2 1 0
+sa
+rra
+pb
+KO # exibe 'KO' se a lista nao foi organizada.
+
+$>./checker 3 2 one 0
+Error # quando argumentos diferentes de numeros.
+
+$>./checker "" 1
+Error # quando tem uma string vazia ou quando nao ha argumentos invalidos!
 ```
 Use `make` or `make bonus` and follow instructions [`Here`](#discription-of-mandatory-part)
+
+## Download
+### ssh
+```ssh
+git clone git@github.com:vinicius-f-pereira/push_swap.git
+```
+### https
+```bash
+git clone https://github.com/vinicius-f-pereira/push_swap.git
+```
+### github cli (gh)
+```bash
+gh repo clone vinicius-f-pereira/push_swap
+```
+
