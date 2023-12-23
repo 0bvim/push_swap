@@ -8,6 +8,22 @@ the lowest possible number of actions. To succeed you’ll have to manipulate va
 types of algorithms and choose the most appropriate solution (out of many) for an
 optimized data sorting.
 
+| Instruction | Description |
+|:-----------:|-------------|
+| sa          | swaps the first and second elements of stack A |
+| sb          | swaps the first and second elements of stack B |
+| ss          | executes the sa and sb commands simultaneously |
+| pa          | removes the first element from stack B and places it on top of stack A |
+| pb          | removes the first element from stack A and places it on top of stack B |
+| ra          | rotates stack A from top to bottom |
+| rb          | rotates stack B from top to bottom |
+| rr          | rotates both stacks A and B from top to bottom |
+| rra         | rotates stack A from bottom to top |
+| rrb         | rotates stack B from bottom to top |
+| rrr         | rotates both stacks A and B from bottom to top |
+
+#
+
 ### Discription of mandatory part
 In this part we need to sort a list of numbers given in command line.
 ```bash
